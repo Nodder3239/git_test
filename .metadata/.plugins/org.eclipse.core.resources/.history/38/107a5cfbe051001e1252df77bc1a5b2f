@@ -1,0 +1,11 @@
+package basicClass;
+
+public class Book{ //extends Object 생략
+	int bookNum;
+	String bookTitle;
+	
+	Book(int bookNum, String bookTitle){
+		this.bookNum = bookNum;
+		this.bookTitle = bookTitle;
+	}
+}

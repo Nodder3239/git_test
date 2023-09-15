@@ -1,0 +1,10 @@
+package objectArray.dogs;
+
+public class DogArray {
+
+	public static void main(String[] args) {
+		Dog[] dogs = new Dog[3]
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package methods;
+
+public class ReturnMethodTest {
+
+	//return이 있는 함수 (반환 자료형) - int, String // 반환 - 호출할 곳으로 변환값을 보냄
+	//return이 없는 함수 - void
+		
+	public static void main(String[] args) {
+		int n1 = 10, n2 = 20;
+		int sum = n1 + n2;
+		System.out.println(sum);
+
+		//더하기 함수 호출
+		int result = add(10, 20);
+		System.out.println(result);
+	}
+	public static int add(int a, int b) {
+		return a + b;
+	}
+}

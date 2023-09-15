@@ -1,0 +1,26 @@
+package objectArray.dogs;
+
+import objectArray.books.Book;
+
+public class DogArray {
+
+	public static void main(String[] args) {
+		//Dog 인스턴스 4개를 생성해서 배열에 저장하고
+		//정보를 출력하세요
+		
+		
+
+		
+		Dog[] dogs = {
+				new Dog("샛별", "말티즈"),
+				new Dog("고미", "포메라니안"),
+				new Dog("야옹이", "진돗개"),
+				new Dog("돼지", "비글")};
+		
+		for(int i=0; i<dogs.length; i++) { 
+			System.out.println("이름: " + name + ", 종: " + type);
+		}
+		
+		}
+
+}

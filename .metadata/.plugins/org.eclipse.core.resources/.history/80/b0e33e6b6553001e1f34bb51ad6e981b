@@ -1,0 +1,11 @@
+package dates;
+
+public class Calendar {
+
+	public static void main(String[] args) {
+		CalendarTest cal = CalendarTest.getInstance();
+		System.out.println(cal);
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package classes.methods;
+
+
+//계산기 자료형 정의
+public class Calculator {
+	
+	//public Calculator() {} 생략
+	
+	//메서드 정의 - 더하기, 빼기, 곱하기, 나누기
+	public int add(int n1, int n2) {
+		return n1 + n2;
+	}
+	public int b(int n1, int n2) {
+		return n1 - n2;
+	}
+	public int c(int n1, int n2) {
+		return n1 * n2;
+	}
+	public int d(int n1, int n2) {
+		return n1 / n2;
+	}
+}

@@ -1,0 +1,18 @@
+package classes;
+
+
+//참조(Reference) 자료형
+public class Student {
+	//클래스 내부의 변수를 필드(field)라고 함
+	String name;  //학생 이름
+	int studentId; //학번
+	int grade;  //학년
+	
+	//public Student() {} // 기본 생성자 생략
+	
+	//학생의 정보를 출력하는 메서드(함수) 필요
+	//public 접근제어자, void 반환값 없음
+	public void showStudentInfo() {
+		System.out.println("이름: " + name + ", 학번: " + studentId + ", 학년: " + grade);
+	}
+}

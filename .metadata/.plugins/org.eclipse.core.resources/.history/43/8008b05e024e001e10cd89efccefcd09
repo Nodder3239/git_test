@@ -1,0 +1,11 @@
+package methods;
+
+public class MathTest {
+
+	public static void main(String[] args) {
+		// 내장 함수 중 수학(math) 함수 사용
+		int v1 = Math.abs(-10); // 절대값
+		System.out.println(v1);
+	}
+
+}

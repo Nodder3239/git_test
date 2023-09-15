@@ -1,0 +1,25 @@
+package methods;
+
+public class MathTest {
+
+	public static void main(String[] args) {
+		// 내장 함수 중 수학(math) 함수 사용
+		int v1 = Math.abs(-10); 		// 절대값
+		System.out.println("v1 = " + v1);
+		
+		long v2 = Math.round(5.67); 	// 반올림해서 정수로 변환
+		System.out.println("v2 = " + v2);
+		
+		double v3 = Math.floor(5.67); 	// 반올림해서 정수로 변환
+		System.out.println("v3 = " + v3);
+		
+		long v4 = Math.round(5.67); 	// 반올림해서 정수로 변환
+		System.out.println("v4 = " + v4);
+		
+		
+		
+		
+		
+	}
+
+}

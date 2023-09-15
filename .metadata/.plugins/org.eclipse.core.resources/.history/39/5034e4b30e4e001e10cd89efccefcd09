@@ -1,0 +1,19 @@
+package dates;
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+
+public class LocalDateTimeTest {
+
+	public static void main(String[] args) {
+		// LocalDateTime 클래스 사용
+		LocalDateTime now = LocalDateTime.now();
+		System.out.println(now);
+		
+		// 날짜/시간 포맷 설정
+		SimpleDateFormat now2 = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss a"); // HH 24시, hh 12시
+		System.out.println(now2.format(now));
+		
+	}
+
+}

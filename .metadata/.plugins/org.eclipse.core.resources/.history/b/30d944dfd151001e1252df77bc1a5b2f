@@ -1,0 +1,9 @@
+package protectedEx.pack1;
+
+public class B {
+	String field;
+	
+	A(){}
+	
+	
+}
