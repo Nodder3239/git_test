@@ -1,0 +1,17 @@
+package singleton.student;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		
+		School school = School.getInstance();
+		
+		Student 개똥이 = school.createStu();
+		Student 소똥이 = school.createStu();
+		Student 말똥이 = school.createStu();
+		System.out.println("학번: " + 개똥이.getStuNum());
+		System.out.println("학번: " + 소똥이.getStuNum());
+		System.out.println("학번: " + 말똥이.getStuNum());
+	}
+
+}
