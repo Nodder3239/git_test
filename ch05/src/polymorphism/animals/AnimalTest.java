@@ -28,7 +28,7 @@ class Tiger extends Animal{
 
 
 public class AnimalTest {
-		//moveAnimal() 정의
+		//moveAnimal() 정의 - 매개 변수의 다형성
 	public void moveAnimal(Animal animal) {
 		animal.move();
 	}
@@ -36,7 +36,7 @@ public class AnimalTest {
 		//AnimalTest 객체 생성
 		AnimalTest aTest = new AnimalTest();
 		
-		//Animal 타입으로 객체 생성
+		//Animal 타입으로 객체 생성(다형성)
 		//Animal human = new Human();
 		//Animal eagle = new Eagle();
 		//Animal tiger = new Tiger();
