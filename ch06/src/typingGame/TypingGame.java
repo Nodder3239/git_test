@@ -21,8 +21,8 @@ public class TypingGame {
 		start = System.currentTimeMillis();
 		
 		while(n < 11) {	
+			System.out.println("문제 " + n);
 			int rand = (int) (Math.random()*words.length);
-			System.out.println("문제" + n);
 			String question = words[rand]; //출제된 단어
 			System.out.println(question); //사용자 입력
 			//단어 입력

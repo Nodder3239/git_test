@@ -16,6 +16,8 @@ public class WriteExample1 {
 			byte a = 10;
 			byte b = 20;
 			byte c = 30;
+			//char d = '가'; // 못 읽음
+			int d = 97; //아스키 코드값(문자 출력 - a)
 			
 			//db파일에 데이터 쓰기
 			os.write(a);

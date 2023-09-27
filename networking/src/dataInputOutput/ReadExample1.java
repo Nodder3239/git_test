@@ -12,6 +12,7 @@ public class ReadExample1 {
 		
 		try {
 			InputStream is = new FileInputStream("C:/File/test1.db");
+			
 			while(true) {
 				int data = is.read();
 				if(data == -1) break;	//data가 없음
@@ -21,7 +22,6 @@ public class ReadExample1 {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

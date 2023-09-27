@@ -110,7 +110,7 @@ public class BankMain2 {
 			else {
 				System.out.println("결과: 계좌가 없습니다.");
 				}
-			}
+			}//while 끝
 		}
 	//출금
 	private static void withdraw(){

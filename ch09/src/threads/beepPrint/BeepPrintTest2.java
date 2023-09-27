@@ -5,7 +5,7 @@ public class BeepPrintTest2 {
 	public static void main(String[] args) {
 		//beepTask 객체 생성
 		Runnable beepTask = new BeepTask();
-		//작업스레드 객체 생성
+		//작업스레드 객체 생성(소리 발생)
 		Thread thread = new Thread(beepTask);
 		thread.start();	//스레드 시작(실행)
 		
