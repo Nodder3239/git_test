@@ -9,13 +9,14 @@ public class ReadExample1 {
 
 	public static void main(String[] args) {
 		// 입력 스트림 객체 생성
-		
+
 		try {
 			InputStream is = new FileInputStream("C:/File/test1.db");
-			
-			while(true) {
+
+			while (true) {
 				int data = is.read();
-				if(data == -1) break;	//data가 없음
+				if (data == -1)
+					break; // data가 없음
 				System.out.println(data);
 			}
 			is.close();

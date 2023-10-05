@@ -13,21 +13,21 @@ public class EcoClient {
 		try {
 			Socket socket = new Socket("localhost", 50001);
 			System.out.println("[클라이언트] 연결 성공");
-			
-			//데이터 보내기
-			String sendMessage = "오늘도 즐거운 하루 되세요~";
+
+			// 데이터 보내기
+			String sendMessage = "자바 네트워크 프로그래밍";
 			OutputStream os = socket.getOutputStream();
 			byte[] bytes = sendMessage.getBytes("utf-8");
 			os.write(bytes);
 			os.flush();
 			System.out.println("[클라이언트] 데이터 보냄: " + sendMessage);
-			//서버가 보낸 데이터 받기
+			// 서버가 보낸 데이터 받기
 			InputStream is = socket.getInputStream();
 			bytes = new byte[1024];
 			int readBytes = is.read(bytes);
 			String receiveMessage = new String(bytes, 0, readBytes, "utf-8");
 			System.out.println("[클라이언트] 데이터 받음: " + receiveMessage);
-			
+
 			socket.close();
 			System.out.println("[클라이언트] 연결 끊음");
 		} catch (UnknownHostException e) {
@@ -35,7 +35,6 @@ public class EcoClient {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 
 	}
 
