@@ -25,20 +25,18 @@ public class UserInsertTest {
 					+ "VALUES (?, ?, ?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			//? 값 지정
-			pstmt.setString(1, "cloud2");
-			pstmt.setString(2, "김구름");
+			pstmt.setString(1, "sky123");
+			pstmt.setString(2, "최하늘");
 			pstmt.setString(3, "u12345");
-			pstmt.setInt(4, 38);
-			pstmt.setString(5, "cloud2@cloud.com");
+			pstmt.setInt(4, 28);
+			pstmt.setString(5, "sky123@cloud.com");
 			
 			//sql 실행
 			int rows = pstmt.executeUpdate();
 			System.out.println("저장된 행의 수: " + rows);
 			//auto commit이 됨
 			
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {	//반드시 수행되는 구간
 			if(conn != null) {	//연결이 되어 있다면

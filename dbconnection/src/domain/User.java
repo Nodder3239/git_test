@@ -1,7 +1,9 @@
 package domain;
 
+import java.io.Serializable;
+
 //dto 클래스(자료 전달 객체), vo
-public class User {
+public class User implements Serializable{
 	//필드
 	private String userId;
 	private String userName;
