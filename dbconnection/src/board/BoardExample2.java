@@ -2,19 +2,25 @@ package board;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Scanner;
 
-public class BoardExample1 {
+public class BoardExample2 {
 
 	private Scanner scanner = new Scanner(System.in);
 	private Connection conn;
+	private PreparedStatement pstmt;
+	
+	//db 연결 관련 변수
 	private String driverClass = "oracle.jdbc.OracleDriver";
 	private String url = "jdbc:oracle:thin:@localhost:1521/xe";
 	private String user = "c##mydb";
 	private String password = "pwmydb";
 	
 	//생성자
-	public BoardExample1() {
+	public BoardExample2() {
 		try {
 			Class.forName(driverClass);
 			conn = DriverManager.getConnection(url, user, password);
@@ -31,8 +37,34 @@ public class BoardExample1 {
 		System.out.println("-------------------------------------------------------");
 		System.out.printf("%-4s%-12s%-12s%-40s\n", "no", "writer", "date", "title");
 		System.out.println("-------------------------------------------------------");
-		System.out.printf("%-4s%-12s%-12s%-40s\n", 
-						"1", "today12", "2023-10-17", "가입인사 드립니다.");
+
+		//db - board 테이블의 모든 게시글 가져오기
+		try {
+			String sql = "SELECT bno, btitle, bcontent, bwriter, bdate "
+					+ "FROM board ORDER BY bno DESC";
+			pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {	//게시글이 있는 동안 반복(다음 행으로 이동)
+				Board board = new Board();
+				board.setBno(rs.getInt("bno"));
+				board.setBwriter(rs.getString("bwriter"));
+				board.setBdate(rs.getDate("bdate"));
+				board.setBtitle(rs.getString("btitle"));
+				
+				//게시글 출력
+				System.out.printf("%-4s%-12s%-12s%-40s\n", 
+						board.getBno(),
+						board.getBwriter(),
+						board.getBdate(),
+						board.getBtitle()
+				);
+			}//while 끝
+			rs.close();
+			pstmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			exit();
+		}
 		
 		mainMenu();	//mainMenu() 메서드 호출
 		
@@ -78,7 +110,7 @@ public class BoardExample1 {
 	}
 	
 	public static void main(String[] args) {
-		BoardExample1 board1 = new BoardExample1();
+		BoardExample2 board1 = new BoardExample2();
 		board1.list();
 		
 	}
