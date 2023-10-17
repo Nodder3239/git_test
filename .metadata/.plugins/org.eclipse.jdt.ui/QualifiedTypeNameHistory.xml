@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="protectedEx.pack1.A"/>
     <fullyQualifiedTypeName name="customers.VIPCustomer"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
@@ -53,11 +52,12 @@
     <fullyQualifiedTypeName name="java.net.SocketAddress"/>
     <fullyQualifiedTypeName name="java.net.DatagramPacket"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.sql.Blob"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="banking.common.JDBCUtil"/>
 </qualifiedTypeNameHistroy>
