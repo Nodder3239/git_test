@@ -258,6 +258,14 @@ public class BoardExample2 {
 				pstmt = conn.prepareStatement(sql);
 				//sql 실행
 				pstmt.executeUpdate();
+
+				sql = "DROP SEQUENCE seq";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.executeUpdate();
+				
+				sql = "CREATE SEQUENCE seq NOCACHE";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.executeUpdate();
 				
 				pstmt.close();
 			} catch (SQLException e) {
