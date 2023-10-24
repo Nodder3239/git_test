@@ -35,7 +35,7 @@ public class ExCalcEvent {
 		
 		//패널에 버튼, 텍스트 상자 추가
 		pane1.add(text1);
-		pane1.add(new JLabel("+"));
+		pane1.add(new JLabel("□"));
 		pane1.add(text2);
 		pane1.add(new JLabel("="));
 		pane1.add(text3);
@@ -97,7 +97,7 @@ public class ExCalcEvent {
 				int num1 = Integer.parseInt(text1.getText());	//입력된 문자를 숫자로 변환
 				int num2 = Integer.parseInt(text2.getText());
 				float div = (float) num1 / num2;
-				text3.setText(String.valueOf(Math.round(div * 1000) / 1000.0));	//숫자를 문자형으로 변환
+				text3.setText(String.valueOf(Math.round(div * 1000) / 1000));	//숫자를 문자형으로 변환
 				
 			}
 		};
