@@ -14,6 +14,7 @@ public class ExchangeRate {
 	public static void main(String[] args) {
 		try {
 			//환율 정보를 가져올 웹페이지 url
+			//네이버 > 증권 > 시장지표
 			String url = "https://finance.naver.com/marketindex/";
 			
 			//Connection 객체 생성
